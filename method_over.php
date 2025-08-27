@@ -1,42 +1,29 @@
 <?php
-class cars{
-
-    public $car_brand;
-    public $car_model;
-
-    public function __construct($car_brand, $car_model)
-    {
-
-        $this->car_brand = $car_brand;
-        $this->car_model = $car_model;
-    }  
-
-
-    public function info_car(){
-        echo "I have a  car  name is{$this->car_brand} and model name is {$this->car_model}";
-    }
-
-
-}
-class bike extends cars{
-    public $cc;
-
-    public function __construct($car_brand,$car_model,$cc)
-    {
-        $this->car_brand = $car_brand;
-        $this->car_model = $car_model;
-        $this->cc = $cc;
-
-        
-    }
-
-    public function info_bike(){
-        echo "I have a bike name is {$this->car_brand} and model name is {$this->car_model} and cc is {$this->cc}";
-    }
-
-    
-
-
+class Fruit {
+  public $name;
+  public $color;
+  
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  public function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
 }
 
+class Strawberry extends Fruit {
+  public $weight;
+  public function __construct($name, $color, $weight) {
+    $this->name = $name;
+    $this->color = $color;
+    $this->weight = $weight;
+  }
+  public function intro() {
+    echo "The fruit is {$this->name}, the color is {$this->color}, and the weight is {$this->weight} gram.";
+  }
+}
+
+$strawberry = new Strawberry("Strawberry", "red", 50);
+$strawberry->intro();
 ?>
