@@ -15,6 +15,7 @@ class Fruit {
 class Strawberry extends Fruit {
   public $weight;
   public function __construct($name, $color, $weight) {
+
     $this->name = $name;
     $this->color = $color;
     $this->weight = $weight;
@@ -24,6 +25,9 @@ class Strawberry extends Fruit {
   }
 }
 
-$strawberry = new Strawberry("Strawberry", "red", 50);
+$strawberry = new Strawberry("Strawberry", "red", 10);
+$apple = new Strawberry("Apple","red",10);
 $strawberry->intro();
+echo"<br>";
+$apple->intro();
 ?>
