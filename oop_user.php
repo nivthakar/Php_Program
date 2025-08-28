@@ -1,4 +1,5 @@
 <?php
+//Journal Program 2
 class sum{
 
     public $name;
